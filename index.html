@@ -4,43 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <title>Pop the Ballons</title>
+    <title>MEMES</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="memes.jpg">
 </head>
 <body>
-    <div class="wrapper">
-        <h1>Pop the balloons by moving</br>your mouse over them</h1>
-        <div id="yay-no-balloons"><span class="blue">Wow!</span> All balloons popped!</div>
-        <div id="balloon-gallery">
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-        </div>
+  
+  <header>
+    <h2>MEMES WORD</h2>
+  </header>
 
+ <div class="container__keys">
+    <div data-key="65" class="key">
+      <kbd>A</kbd>
+      <span class="sound">clap</span>
     </div>
+    <div data-key="83" class="key">
+      <kbd>S</kbd>
+      <span class="sound">hihat</span>
+    </div>
+    <div data-key="68" class="key">
+      <kbd>D</kbd>
+      <span class="sound">kick</span>
+    </div>
+    <div data-key="70" class="key">
+      <kbd>F</kbd>
+      <span class="sound">openhat</span>
+    </div>
+ </div>
 
-    <audio src="sound/Duar Memek - Sound Effect (No Copyright) (mp3cut.net).mp3" id="sound"></audio>
-    <script src="app.js"></script>
+  <audio data-key="65" src="sounds/ajg.wav"></audio>
+  <audio data-key="83" src="sounds/bgst.wav"></audio>
+  <audio data-key="68" src="sounds/duar.mp3"></audio>
+  <audio data-key="70" src="sounds/entod.wav"></audio>
+
+
+
+     <script src="app.js"></script>
 </body>
 </html>

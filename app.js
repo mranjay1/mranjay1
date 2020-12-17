@@ -1,31 +1,31 @@
-let popped = 0;
-const sound = document.querySelector('#sound')
-document.addEventListener('click', function(e){
+
+
+window.addEventListener('keydown', function(e){
+   
+    const audioSound = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+    const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+    console.log(key);
+
+    if(!audioSound) return;
+     
+    audioSound.currentTime = 0;
+    audioSound.play();
+
+    key.classList.add('playing');
+
+
     
-    if (e.target.className === "balloon"){
+    function removeTransition(e) {
 
-                e.target.style.backgroundColor = "#ededed";
-                e.target.textContent = "DUAR";
-                sound.play();
+        if (e.propertyName !== 'transform'){
+            this.classList.remove('playing');
+        }  return;
 
-                popped++;
-                removeEvent(e);
-                checkAllPopped();
-    }   
-});
-
-function removeEvent(e){
-    e.target.removeEventListener('click', function(){
-        sound.play()
-    })
-};
-
-function checkAllPopped(){
-    if (popped === 24){
-        console.log('all popped!');
-        let gallery = document.querySelector('#balloon-gallery');
-        let message = document.querySelector('#yay-no-balloons');
-        gallery.innerHTML = '';
-        message.style.display = 'block';
     }
-};
+
+    const keys = document.querySelectorAll('.key');
+    for (i = 0; i < keys.length; i++) {
+        
+        key.addEventListener('transitionend', removeTransition);
+    }
+});
